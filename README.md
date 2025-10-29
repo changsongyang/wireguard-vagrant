@@ -1,8 +1,8 @@
 # WireGuard
 
-Install the base [ubuntu 20.04 vagrant box](https://github.com/rgl/ubuntu-vagrant).
+Install the base [ubuntu 22.04 uefi vagrant box](https://github.com/rgl/ubuntu-vagrant).
 
-Install the base [windows 2019 vagrant box](https://github.com/rgl/windows-vagrant).
+Install the base [windows 2022 uefi vagrant box](https://github.com/rgl/windows-vagrant).
 
 Launch the environment:
 

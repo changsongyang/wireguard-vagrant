@@ -28,11 +28,11 @@ end
 
 def define_ubuntu_node(config, name, fqdn, ip_address, vpn_ip_address)
   config.vm.define name do |config|
-    config.vm.box = 'ubuntu-20.04-amd64'
+    config.vm.box = 'ubuntu-22.04-uefi-amd64'
     config.vm.provider 'libvirt' do |lv, config|
       lv.cpus = 2
       lv.cpu_mode = 'host-passthrough'
-      lv.memory = 512
+      lv.memory = 1*1024
       lv.nested = true
       lv.keymap = 'pt'
       config.vm.synced_folder '.', '/vagrant', type: 'nfs', nfs_version: '4.2', nfs_udp: false
@@ -47,7 +47,7 @@ end
 
 def define_windows_node(config, name, fqdn, ip_address, vpn_ip_address)
   config.vm.define name do |config|
-    config.vm.box = 'windows-2019-amd64'
+    config.vm.box = 'windows-2022-uefi-amd64'
     config.vm.provider 'libvirt' do |lv, config|
       lv.cpus = 2
       lv.cpu_mode = 'host-passthrough'
